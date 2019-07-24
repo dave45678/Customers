@@ -15,15 +15,11 @@ public class HomeController {
     private CustomerRepository repository;
 
     @RequestMapping("/")
-    public String findByName(Model model, String lastName){
-        model.addAttribute("customers" , repository.findByName(lastName));
+    public String findByName(Model model){
+        String lastName = "Smith";
+        model.addAttribute("customers" , repository.findAllByLastName(lastName));
         return "list";
     }
-
-    @GetMapping("/add")
-    public String customerForm(Model model)
-
-
 
 
 }

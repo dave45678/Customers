@@ -15,9 +15,9 @@
             <th>First Name</th>
             <th>Last Name</th>
         </tr>
-        <tr th:each="Customer : ${Customers}">
-            <td th:text="${Customer.firstName}"></td>
-            <td th:text="${Customer.lastName}"></td>
+        <tr th:each="customer : ${customers}">
+            <td th:text="${customer.FirstName}"></td>
+            <td th:text="${customer.LastName}"></td>
         </tr>
     </table>
 
